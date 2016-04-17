@@ -5,6 +5,14 @@ function test1(N)
 	end
 end
 
+function test2(N)
+	count = 1.0
+	for i = 1:N
+		count += count
+	end
+end
+
 N = 100_000_000_000_000
 
 println(@elapsed test1(N))
+println(@elapsed test2(N))
